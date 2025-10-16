@@ -20,8 +20,8 @@ public class Main {
         moveStack.push(alwaysSafe1);
 
 
-
-        try (Scanner fileScanner = new Scanner(new FileReader("C:\\Users\\Despi\\OneDrive\\Desktop\\cords.txt"))) {
+        /************FILE READER ************ */
+        try (Scanner fileScanner = new Scanner(new FileReader("cords"))) {
             while (fileScanner.hasNextLine()) {
                 String line = fileScanner.nextLine();
 
@@ -53,6 +53,8 @@ public class Main {
             System.out.println(e);
         }
 
+
+        /**************** TESTING STACK ************* */
         System.out.println("Pit 1 = " + pit1.toString() + " pushing pit1 to stack");
         moveStack.push(pit1);
         System.out.println("Pit 2 = " + pit2.toString()  + " pushing pit2 to stack");
@@ -61,11 +63,22 @@ public class Main {
         moveStack.push(wumpus);
         System.out.println("Goal = " + goal.toString() + " pushing goal to stack");
         moveStack.push(goal);
-
         System.out.println("\nPeeking stack" + moveStack.toString());
 
-        Agent agent = new Agent();
 
+        /************* TESTING AGENT ************* */
+        Agent agent = new Agent();
         System.out.println(agent);
+
+
+
+        /************* TESTING GBOARD ************* */
+        System.out.println("************ TESTING GBOARD *************");
+        Gameboard gBoard = new Gameboard();
+
+        System.out.println(gBoard);
+
+
+
     }
 }

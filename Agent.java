@@ -13,7 +13,6 @@ public class Agent {
 
     public void AgentMove(){
 
-        while (POS != )
 
     }
 
