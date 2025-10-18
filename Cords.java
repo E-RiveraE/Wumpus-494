@@ -8,9 +8,16 @@ public class Cords {
         this.y = y;
     }
 
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
 
     @Override
     public String toString() {
-        return "Cords(" + "x=" + x + ", y=" + y + ')';
+        return "(" + "x=" + x + ", y=" + y + ')';
     }
 }
