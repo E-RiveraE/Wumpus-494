@@ -3,6 +3,7 @@ public class Cords {
     private int x;
     private int y;
 
+    private boolean pit() ;
     Cords(int x, int y){
         this.x = x;
         this.y = y;
