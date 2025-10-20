@@ -19,7 +19,7 @@ public class Main {
 
         /************FILE READER ************/
         System.out.println("****** WUMPUS WORLD AGENT *****\n");
-        System.out.println("Reading cave configuration from cords.txt...");
+        System.out.println("Reading cave cords from cords.txt...");
 
         try (Scanner fileScanner = new Scanner(new FileReader("cords"))) {
             while (fileScanner.hasNextLine()) {
@@ -40,14 +40,14 @@ public class Main {
                             System.out.println("  Pit set at (" + x + "," + y + ")");
                         } else {
                             pit2 = new Cords(x, y);
-                            System.out.println("  Pit configured at (" + x + "," + y + ")");
+                            System.out.println("  Pit set at (" + x + "," + y + ")");
                         }
                     } else if (type.equalsIgnoreCase("w") || type.equalsIgnoreCase("wumpus")) {
                         wumpus = new Cords(x, y);
-                        System.out.println("  Wumpus configured at (" + x + "," + y + ")");
+                        System.out.println("  Wumpus set at (" + x + "," + y + ")");
                     } else if (type.equalsIgnoreCase("g") || type.equalsIgnoreCase("paradise") || type.equalsIgnoreCase("gold")) {
                         paradise = new Cords(x, y);
-                        System.out.println("  Paradise configured at (" + x + "," + y + ")");
+                        System.out.println("  Paradise set at (" + x + "," + y + ")");
                     }
                 }
             }
@@ -188,7 +188,7 @@ public class Main {
     }
 
 
-    /************ SAFE MOVES (debug) ************ */
+    /************ SAFE MOVES (bruteforce for debug) ************ */
     private static ArrayStack<Cords> planSafeMoves(Agent agent){
         ArrayStack<Cords> moves = new ArrayStack<>(20);
 
