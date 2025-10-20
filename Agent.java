@@ -211,7 +211,7 @@ public class Agent {
         return safeCells;
     }
 
-    /** Find closest cell from list (Manhattan distance)     */
+    /** Find closest cell from list   */
     private Cords findClosestCell(List<Cords> cells) {
         Cords closest = cells.get(0);
         int minDistance = Integer.MAX_VALUE;
@@ -227,9 +227,7 @@ public class Agent {
         return closest;
     }
 
-    /**
-     * From a list of unknown moves, choose the one with lowest danger probability
-     */
+    /** From a list of unknown moves, choose the one with lowest danger probability     */
     private Cords chooseLeastDangerous(List<Cords> moves) {
         Cords bestMove = null;
         double lowestDanger = Double.MAX_VALUE;
