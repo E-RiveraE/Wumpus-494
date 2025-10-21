@@ -3,4 +3,13 @@
 **Instructor: Dr. Miller-Edwards**
 
 
-This Java program runs the Wumpus World game. The program reads a .txt file where it specifies the
+This program simulates a simplified version of the Wumpus World game. It reads from an input file (wumpus.txt) that specifies the locations of 
+pits, glowing paradise (gold), and the Wumpus using the following notation:
+
+    P[x,y] - Pit at coordinate (x,y)
+    G[x,y] - Glowing paradise (gold) at coordinate (x,y)
+    W[x,y] - Wumpus at coordinate (x,y)
+
+1. cords.txt
+   -Input file specifying world l
+2. 
