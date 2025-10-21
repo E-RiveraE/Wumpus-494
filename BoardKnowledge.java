@@ -1,12 +1,14 @@
+/*** DATA CLASS, HOLDS ALL KNOWLEDGE ABOUT A SINGLE CELL ***/
 public class BoardKnowledge {
 
-    private boolean visited;
-    private boolean safe;
-    private boolean isBreezy;
+    // --- CELL STATE BOOLS ---
+    private boolean visited;  // T if agent has been here
+    private boolean safe;     // T if cell is known/inferred to be safe
+    private boolean isBreezy; // T if a breeze was felt here
+    private boolean isStinky; // T if a stink was smelled here
 
-    private boolean isStinky;
 
-
+    /****** CONSTRUCTOR, INITS ALL BOOLS TO F ******/
     public BoardKnowledge() {
         this.visited = false;
         this.safe = false;
@@ -14,6 +16,7 @@ public class BoardKnowledge {
         this.isStinky = false;
     }
 
+    /*** GETTERS FOR CELL KNOWLEDGE ***/
     public boolean isVisted() {
         return visited;
     }
@@ -30,7 +33,7 @@ public class BoardKnowledge {
         return isStinky;
     }
 
-    //setters
+    /*** SETTERS FOR CELL KNOWLEDGE ***/
     public void setVisited(boolean visited) {
         this.visited = visited;
     }
